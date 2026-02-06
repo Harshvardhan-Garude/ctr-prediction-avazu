@@ -1,0 +1,3 @@
+# Example usage
+# python src/train_tree_models.py --data_csv /path/to/sampled_data2.csv --out_dir outputs/tree
+# python src/train_deep_models.py --data_csv /path/to/sampled_data2.csv --out_dir outputs/deep --model dcn

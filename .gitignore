@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Data / outputs
+data/
+outputs/
+*.csv
+*.parquet
+*.pkl
+*.joblib
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
