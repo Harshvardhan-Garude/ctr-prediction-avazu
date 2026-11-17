@@ -34,7 +34,13 @@ python -m pip install -r requirements.txt
 python src/train_tree_models.py --data_csv path/to/sampled_data2.csv --out_dir outputs/tree
 ```
 
-### Train and evaluate a deep CTR model
+### Deep CTR model setup is incomplete
+
+A fresh Windows/Python 3.12 installation of `requirements.txt` completed, but
+`python src/train_deep_models.py --help` failed because `deepctr-torch` imports
+`requests`, which is missing from the manifest. Resolve and pin the deep-model
+dependencies before relying on this path. The tree-model CLI is independently
+usable. The following command is the intended deep-model invocation:
 
 ```bash
 python src/train_deep_models.py --data_csv path/to/sampled_data2.csv --out_dir outputs/deep --model dcn
