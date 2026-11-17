@@ -39,8 +39,11 @@ python src/train_tree_models.py --data_csv path/to/sampled_data2.csv --out_dir o
 A fresh Windows/Python 3.12 installation of `requirements.txt` completed, but
 `python src/train_deep_models.py --help` failed because `deepctr-torch` imports
 `requests`, which is missing from the manifest. Resolve and pin the deep-model
-dependencies before relying on this path. The tree-model CLI is independently
-usable. The following command is the intended deep-model invocation:
+dependencies before relying on this path. The script also calls `model.save`,
+which is not provided by the installed deepctr-torch 0.3.0 model classes; use a
+supported PyTorch checkpoint-saving path and verify it before a full run.
+The tree-model CLI is independently usable. The following command is the
+intended deep-model invocation:
 
 ```bash
 python src/train_deep_models.py --data_csv path/to/sampled_data2.csv --out_dir outputs/deep --model dcn
